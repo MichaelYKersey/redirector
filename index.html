@@ -1,0 +1,17 @@
+<div>
+    Set redirection by going to <a href="./set.html">the set page</a> with the query "redirect" set to the redirect uri
+</div>
+<div>
+    Be redirected by going to <a href="./redirect.html">the redirect page</a>
+</div>
+</div>
+    currently your redirect is set to "<a id="url"></a>"
+<div>
+<script>
+    const oldElement = document.getElementById("url");
+    const newElement = document.createElement('a')
+    const url = cookieStore.get('redirect');
+    newElement.textContent = url;
+    newElement.href = url;
+    oldElement.replaceWith(newElement);
+</script>
