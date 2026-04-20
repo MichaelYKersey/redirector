@@ -1,9 +1,8 @@
-<script>
+<script type="module">
+    import {createCookie} from './cookies.js';
     const params = new URLSearchParams(window.location.search);
     //console.log("set page");
     const url = params.get("redirect");
     console.log(url);
-    cookieStore.set("redirect",url);
-    console.log(cookieStore.get("redirect"));
-    //window.location.href = "./index.html";
+    createCookie("redirect",url);
 </script>

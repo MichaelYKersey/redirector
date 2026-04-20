@@ -7,10 +7,11 @@
 </div>
     currently your redirect is set to "<a id="url"></a>"
 <div>
-<script>
+<script type="module">
+    import {readCookie} from './cookies.js';
     const oldElement = document.getElementById("url");
     const newElement = document.createElement('a')
-    const url = cookieStore.get('redirect');
+    const url = readCookie('redirect');
     newElement.textContent = url;
     newElement.href = url;
     oldElement.replaceWith(newElement);

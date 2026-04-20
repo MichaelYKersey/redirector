@@ -1,4 +1,5 @@
-<script>
-const url = cookieStore.get("redirect");
-window.location.href = url + window.location.search;
+<script type="module">
+    import {readCookie} from './cookies.js';
+    const url = readCookie("redirect");
+    window.location.href = url + window.location.search;
 </script>
